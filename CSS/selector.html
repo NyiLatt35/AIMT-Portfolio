@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style type="text/css">
+        a[href='one.html']{
+            color: #fff009;
+        }
+        /* *{
+            color: rgb(145, 15, 10);
+        } */
+        h2, .paraTwo{
+            color: rgba(255, 100, 12, 0.7);
+        }
+        div span{
+            color: #0fe90a;
+        }
+        div > span{
+            color: #1124f5;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="one.html">One</a>
+    <a href="two.html">Two</a>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+
+    <p class="paraOne">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, dicta!</p>
+    <p class="paraTwo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem quo pariatur debitis asperiores odit nisi.
+    </p>
+
+    <span>This is outside span element</span>
+
+    <div>
+        <h1>This is <span>Heading</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur <span>adipisicing elit. Temporibus dignissimos</span> fugiat minima quidem <span>provident quis cum, eum</span> nulla nam sunt.</p>
+        <span>This is span element</span>
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+    Attribute Selector
+    Universal Selector
+    Grouping Selector
+    Descendant Selector
+    Child Selector
+ -->

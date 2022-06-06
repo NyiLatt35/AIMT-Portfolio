@@ -1,0 +1,573 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', 'Secular One', sans-serif;
+}
+
+.text-gray {
+    color: #777;
+}
+
+.bg-dark {
+    background: #2b3940;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.title::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background-color: #00ffff;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section {
+    padding: 5rem;
+}
+
+/* Navbar Css */
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+    flex-wrap: wrap;
+    padding: 0px 50px;
+    border: 1px solid red;
+    font-weight: 500;
+    position: fixed;
+    /* width: 100%; */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f4f4f4;
+    z-index: 10;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+.navbar-menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.toggle {
+    display: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.navbar-menu li a:hover {
+    color: #00ffff;
+}
+
+/* Banner Css */
+header {
+    height: 600px;
+    background-color: #999;
+    background-image: url('../img/people.png');
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.navbar-logo i {
+    font-size: 2rem;
+    color: #00ffff;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 40%;
+    transform: translateY(-50%);
+}
+
+.banner .banner-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.banner .banner-name {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.para {
+    line-height: 1.5rem;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #00ffff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px;
+    display: inline-block;
+    background: linear-gradient(#00ffff, #00ffff) #2b3940;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
+}
+.btn:hover{
+    background-size: 0 100%;
+}
+
+/* About img & content Css */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img,
+.about-content {
+    width: 50%;
+}
+
+.about-img {
+    text-align: center;
+}
+
+.about-img img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px solid #999;
+    object-fit: contain;
+}
+
+.about-img .name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.about-img .job {
+    font-size: 14px;
+}
+
+.about .title,
+.contact .title {
+    text-align: left;
+}
+
+.about .title::after,
+.contact .title::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+.about-content .personal-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-content .personal-info div {
+    width: 50%;
+    padding: 10px 0;
+}
+
+.about-content .personal-info div label {
+    font-weight: 600;
+}
+
+/* Service Css */
+.service-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+}
+
+.service-content .box {
+    width: 32%;
+    background-color: white;
+    padding: 20px;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.service-content .box i {
+    font-size: 3rem;
+}
+
+.service-content .box:hover {
+    background-color: #00ffff;
+    color: #fff;
+}
+
+.service-content .box:hover .text-gray {
+    color: #fff !important;
+}
+
+/* Experience Css */
+.experience .card {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 0;
+}
+
+.experience .card .card-body {
+    width: 48%;
+    padding: 20px;
+    box-shadow: 0.5px 0.5px 15px 0.1px #ddd;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.experience .card .card-body:hover {
+    box-shadow: 2px 2px 15px 5px #ddd;
+}
+
+.experience .card .card-body span {
+    font-size: 14px;
+}
+
+/* Education & Skill Css */
+.edu-skill {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.education {
+    width: 30%;
+    box-shadow: 1px 1px 10px 1px #ddd;
+    padding: 20px;
+}
+
+.education div {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.education div:nth-of-type(3) {
+    border-bottom: 0;
+}
+
+.education div .year {
+    font-size: 12px;
+    background-color: #00ffff;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.education div .job-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.skill {
+    width: 70%;
+    padding: 20px;
+}
+
+.skill>div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+}
+
+.percentage {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.progress-bar label {
+    display: block;
+}
+
+.progress-bar progress {
+    width: 100%;
+    background-color: #a7a7a7;
+}
+
+.progress-bar progress::-moz-progress-bar {
+    background-color: #00ffff;
+}
+
+/* Portfolio Css */
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+
+.portfolio-content .box {
+    width: 32%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-content .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-content .box .box-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0.5);
+    /* opacity: 0; */
+    transform: translateY(-100%);
+    transition: all 0.5s;
+    color: #fff;
+}
+
+.portfolio-content .box:hover .box-overlay {
+    /* opacity: 1; */
+    transform: translateY(0);
+}
+
+/* Contact Css */
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info,.contact-form {
+    width: 50%;
+}
+
+.contact-info div {
+    margin: 10px 0;
+}
+
+.contact-info div i {
+    background-color: #00ffff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 10px;
+}
+
+.contact-info div i:hover {
+    background-color: #000;
+}
+
+.contact-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-form input {
+    width: 48%;
+}
+
+.contact-form textarea {
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    font-size: 16px;
+}
+
+.contact-form form button {
+    margin: 10px 0;
+    padding: 10px;
+    width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: transparent;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    transition: all 0.5s;
+}
+
+.contact-form form button:hover {
+    background-color: #00ffff;
+    color: #fff;
+}
+
+/* Footer Css */
+footer{
+    background-color: #00ffff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Up Css */
+#up{
+    background-color: #00ffff;
+    color: #fff;
+    position: fixed;
+    right: 50px;
+    bottom: 80px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+#up:hover{
+    background-color: #000;
+}
+
+
+/*******************
+ Media Screen 
+*******************/
+
+@media (max-width:1200px) {
+
+    /* About Css */
+    .about-img img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width:992px) {
+
+    /* Banner Css */
+    .toggle {
+        display: block;
+    }
+
+    .navbar-menu {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        display: block;
+    }
+
+    .toggle:hover+.navbar-menu {
+        display: block;
+    }
+
+    /* About Css */
+    .about-content,
+    .about-img {
+        width: 100%;
+    }
+
+    /* Portfolio Css */
+    .portfolio-content .box{
+        width: 48%;
+    }
+}
+
+@media (max-width:768px) {
+
+    /* Bannner Css */
+    .banner {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Service Css */
+    .service-content .box {
+        width: 48%;
+    }
+
+    /* Experience Css*/
+    .experience .card .card-body {
+        width: 100%;
+    }
+
+    /* Education & Skill Css */
+    .education,
+    .skill {
+        width: 100%;
+    }
+
+    /* Portfolio Css */
+    .portfolio-content .box{
+        width: 100%;
+    }
+
+    /* Contact Css */
+    .contact-content .contact-info,
+    .contact-content .contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width:576px) {
+
+    /* About Css */
+    .about-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .about .personal-info div {
+        width: 100%;
+    }
+
+    /* Service Css */
+    .service-content .box {
+        width: 100%;
+    }
+
+    /* Contact Css */
+    .contact-content .contact-form input{
+        width: 100%;
+    }
+}

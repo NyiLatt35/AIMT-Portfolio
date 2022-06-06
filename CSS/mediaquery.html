@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Media Screen</title>
+    <style type="text/css">
+        .box{
+            width: 100%;
+            height: 100px;
+            background-color: gold;
+        }
+
+        /* Maximun Large to Small */
+        /* @media (max-width:1200px){
+            .box{
+                background-color: green;
+            }
+        }
+
+        @media (max-width:992px){
+            .box{
+                background-color: red;
+            }
+        }
+        @media (max-width:768px){
+            .box{
+                background-color: orange;
+            }
+        }
+        @media (max-width:576px){
+            .box{
+                background-color: pink;
+            }
+        } */
+
+        /* Minimum Small to Large */
+        @media (min-width:576px){
+            .box{
+                background-color: green;
+            }
+        }
+
+        @media (min-width:768px){
+            .box{
+                background-color: red;
+            }
+        }
+        @media (min-width:992px){
+            .box{
+                background-color: orange;
+            }
+        }
+        @media (min-width:1200px){
+            .box{
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registor Form</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('./images.jfif') no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        h1{
+            text-transform: uppercase;
+            margin: 30px 0px;
+        }
+
+        form {
+            width: 50%;
+            /* border: 1px solid green; */
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+        }
+        label{
+            text-transform: capitalize;
+            display: block;
+        }
+        input{
+            width: 100%;
+            margin: 10px 0px;
+            padding: 10px;
+            border-radius: 10px;
+            outline: none;
+            background-color: transparent;
+           
+        }
+        input::placeholder{
+            text-transform: capitalize;
+        }
+        div:nth-of-type(6){
+            text-align: center;
+        }
+        input[type='submit']{
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <form action="" method="">
+        <h1>Registor Form</h1>
+        <div class="">
+            <label for="">First Name</label>
+            <input type="text" placeholder="Enter your first name">
+        </div>
+        <div class="">
+            <label for="">Last Name</label>
+            <input type="text" placeholder="Enter your last name">
+        </div>
+        <div class="">
+            <label for="">Email</label>
+            <input type="text" placeholder="Enter your email">
+        </div>
+        <div class="">
+            <label for="">Password</label>
+            <input type="text" placeholder="Enter your password">
+        </div>
+        <div class="">
+            <label for="">Confirm password</label>
+            <input type="text" placeholder="Enter confirm password">
+        </div>
+        <div class="">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+</body>
+
+</html>

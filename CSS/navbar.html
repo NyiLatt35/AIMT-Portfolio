@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: aqua;
+            padding: 10px 20px;
+        }
+        .navbar-logo{
+            float: left;
+        }
+        .navbar-menu{
+            float: right;
+        }
+        nav::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .navbar-menu li{
+            list-style: none;
+            display: inline-block;
+        }
+        a, .toggle{
+            width: 100px;
+            height: 30px;
+            text-decoration: none;
+            line-height: 30px;
+            text-align: center;
+            display: block;
+            border: 1px solid red;
+            color: #555;
+        }
+        .toggle{
+            background: transparent;
+            border: 0 none;
+            float: right;
+            display: none;
+        }   
+        @media (max-width:992px){
+            .navbar-menu{
+                display: none;
+                width: 100%;
+                margin-top: 10px;
+            }
+            .toggle{
+                display: block;
+            }
+            .navbar-menu li{
+                display: block;
+                margin-top: 10px;
+            }
+            .navbar-menu li a{
+                width: 100%;
+            }
+            .toggle:hover + .navbar-menu{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="navbar-logo">Logo</a>
+        <button class="toggle"><i class="fa-solid fa-bars"></i></button>
+        <ul class="navbar-menu">
+            <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
