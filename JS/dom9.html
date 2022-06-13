@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM9</title>
+    <style type="text/css">
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid gray;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        const box = document.querySelector(".box");
+        box.addEventListener("click", () => {
+            if (box.classList.contains('red')) {
+                box.classList.remove('red')
+            } else {
+                box.classList.add('red');
+            }
+
+            // if(box.style.backgroundColor == 'red'){
+            //     box.style.backgroundColor="";
+            // }else{
+            //     box.style.backgroundColor = 'red';
+            // }
+
+            // box.classList.toggle('red');
+
+        });
+    </script>
+</body>
+
+</html>

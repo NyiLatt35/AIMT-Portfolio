@@ -25,4 +25,18 @@ function upperName(name){
     // console.log(name[0].toUpperCase()+name.slice(1));
     console.log(name.replace(name[0],name[0].toUpperCase()));
 }
-upperName("alice");
+upperName("mario");
+
+// Arrow function
+const great = ()=>    console.log("good morning!");
+great();
+
+const sub = (num1,num2)=> num1-num2;
+console.log(sub(5,3));
+
+const sayHey = name => name.replace(name[0],name[0].toUpperCase()) + " says hello.";
+console.log(sayHey("mario"));
+
+// for multipline
+const multi = (num1,num2)=> num1*num2;
+console.log(multi(5,4));

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Heading</h1>
+    <h1>Another Heading</h1>
+    <h2>Heading 2</h2>
+    <p id="para">lorem ipsume</p>
+    <ul class="list">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+        <li>list 6</li>
+        <li>list 7</li>
+    </ul>
+
+    <script>
+        const heading = document.getElementsByTagName("h1");
+        console.log(heading);
+        const heading2 = document.getElementsByTagName("h2");
+        console.log(heading2);
+        const para = document.getElementById("para");
+        console.log(para);
+        const list = document.getElementsByClassName("list");
+        console.log(list);
+
+        const head = document.querySelector("h1");
+        console.log(head);
+        const title = document.querySelectorAll("h1");
+        console.log(title);
+    </script>
+    
+</body>
+</html>

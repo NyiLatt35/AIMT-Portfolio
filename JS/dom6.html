@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM6</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+    </table>
+
+    <script type="text/javascript">
+        const fruits = [
+            { id: 1, name: "apple", price: "3$" },
+            { id: 2, name: "orange", price: "6$" },
+            { id: 3, name: "mango", price: "2$" },
+            { id: 4, name: "watermalon", price: "5$" },
+            { id: 5, name: "grapes", price: "7$" },
+            { id: 6, name: "strawberry", price: "1$" },
+        ];
+
+        let table = document.querySelector("table");
+        let tbody = document.createElement("tbody");
+        let tableList = table.append(tbody);
+        fruits.forEach(f=>{
+            tbody.innerHTML += `<tr>
+                <td>${f.id}</td>
+                <td>${f.name}</td>
+                <td>${f.price}</td>
+                </tr>
+                `;
+        });
+        table.setAttribute("border",1);
+
+        // const fruits = [
+        //     "apple",
+        //     "orange",
+        //     "mango",
+        //     "watermalon",
+        //     "grapes",
+        //     "strawberry",
+        // ];
+
+        // for (let i = 0; i < fruits.length; i++) {
+        //     const tr = document.createElement("tr");
+        //     const td = document.createElement("td");
+        //     const table = document.querySelector("table");
+        //     table.append(tr);
+        //     tr.append(td);
+        //     td.append(fruits[i]);
+        // };
+
+        // fruits.forEach(function(f){
+        //     const tr = document.createElement("tr");
+        //     const td = document.createElement("td");
+        //     const table = document.querySelector("table");
+        //     table.append(tr);
+        //     tr.append(td);
+        //     td.append(f);
+        // });
+
+        // for(f of fruits){
+        //     const tr = document.createElement("tr");
+        //     const td = document.createElement("td");
+        //     const table = document.querySelector("table");
+        //     table.append(tr);
+        //     tr.append(td);
+        //     td.append(f);
+        // };
+
+    </script>
+</body>
+
+</html>
