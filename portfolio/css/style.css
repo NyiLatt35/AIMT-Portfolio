@@ -55,14 +55,14 @@ nav {
     /* text-align: center; */
     flex-wrap: wrap;
     padding: 0px 50px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     font-weight: 500;
     position: fixed;
     /* width: 100%; */
     top: 0;
     left: 0;
     right: 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     z-index: 10;
 }
 
@@ -496,9 +496,9 @@ footer{
         display: block;
     }
 
-    .toggle:hover+.navbar-menu {
+    /* .toggle:hover+.navbar-menu {
         display: block;
-    }
+    } */
 
     /* About Css */
     .about-content,
@@ -570,4 +570,8 @@ footer{
     .contact-content .contact-form input{
         width: 100%;
     }
+}
+
+.active{
+    display: block !important;
 }

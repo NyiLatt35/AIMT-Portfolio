@@ -18,10 +18,11 @@
             background-size: cover;
             height: 100vh;
             display: flex;
-            justify-content:center;
+            justify-content: center;
             align-items: center;
         }
-        h1{
+
+        h1 {
             text-transform: uppercase;
             margin: 30px 0px;
         }
@@ -33,59 +34,122 @@
             backdrop-filter: blur(10px);
             padding: 30px;
         }
-        label{
+
+        label {
             text-transform: capitalize;
             display: block;
         }
-        input{
+
+        input {
             width: 100%;
             margin: 10px 0px;
             padding: 10px;
             border-radius: 10px;
             outline: none;
             background-color: transparent;
-           
+
         }
-        input::placeholder{
+
+        input::placeholder {
             text-transform: capitalize;
         }
-        div:nth-of-type(6){
+
+        div:nth-of-type(6) {
             text-align: center;
         }
-        input[type='submit']{
+
+        input[type='submit'] {
             width: 150px;
+        }
+
+        .error {
+            color: red;
         }
     </style>
 </head>
 
 <body>
-    
-    <form action="" method="">
+
+    <form action="" method="" id="register">
         <h1>Registor Form</h1>
         <div class="">
             <label for="">First Name</label>
-            <input type="text" placeholder="Enter your first name">
+            <input type="text" placeholder="Enter your first name" id="firstname" class="form-input">
+            <p class="error"></p>
         </div>
         <div class="">
             <label for="">Last Name</label>
-            <input type="text" placeholder="Enter your last name">
+            <input type="text" placeholder="Enter your last name" id="lastname" class="form-input">
+            <p class="error"></p>
         </div>
         <div class="">
             <label for="">Email</label>
-            <input type="text" placeholder="Enter your email">
+            <input type="text" placeholder="Enter your email" id="email" class="form-input">
+            <p class="error"></p>
         </div>
         <div class="">
             <label for="">Password</label>
-            <input type="text" placeholder="Enter your password">
+            <input type="text" placeholder="Enter your password" id="password" class="form-input">
+            <p class="error"></p>
         </div>
         <div class="">
             <label for="">Confirm password</label>
-            <input type="text" placeholder="Enter confirm password">
+            <input type="text" placeholder="Enter confirm password" id="confirm_password" class="form-input">
+            <p class="error"></p>
         </div>
         <div class="">
             <input type="submit" value="Submit">
         </div>
     </form>
+
+    <script type="text/javascript">
+        const register = document.querySelector("#register");
+        const firstname = document.querySelector("#firstname");
+        const lastname = document.querySelector("#lastname");
+        const email = document.querySelector("#email");
+        const password = document.querySelector("#password");
+        const confirm_password = document.querySelector("#confirm_password");
+
+        register.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // console.log("hello");
+
+            // if(firstname.value.trim() == ""){
+            //     firstname.parentElement.querySelector(".error").textContent = "First name is required.";
+            // }
+
+            // if(lastname.value.trim() == ""){
+            //     lastname.parentElement.querySelector(".error").textContent = "Last name is required.";
+            // }
+
+            // if(email.value.trim() == ""){
+            //     email.parentElement.querySelector(".error").textContent = "Email is required.";
+            // }
+
+            function checkEmpty(input, msg) {
+                if (input.value.trim() == "") {
+                    input.parentElement.querySelector(".error").textContent = msg;
+                }
+            }
+            checkEmpty(firstname, "firstname is required.");
+            checkEmpty(lastname, "lastname is required.");
+            checkEmpty(email, "email is required.");
+            checkEmpty(password, "password is required.");
+            checkEmpty(confirm_password, "confirm_password is required.");
+
+            if (confirm_password.value.trim() != password.value.trim()) {
+                confirm_password.parentElement.querySelector(".error").textContent = "Password do not match.";
+            }
+        })
+
+        const inputs = document.querySelectorAll(".form-input");
+        // console.log(inputs);
+        inputs.forEach(function(input){
+            input.addEventListener("keypress",function(){
+                input.parentElement.querySelector('.error').textContent = "";
+            });
+        });
+    </script>
 
 </body>
 

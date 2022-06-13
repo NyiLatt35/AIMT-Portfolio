@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <table>
+    <table id="app">
         <thead>
             <tr>
                 <th>Id</th>
@@ -29,18 +29,25 @@
             { id: 6, name: "strawberry", price: "1$" },
         ];
 
-        let table = document.querySelector("table");
-        let tbody = document.createElement("tbody");
-        let tableList = table.append(tbody);
-        fruits.forEach(f=>{
-            tbody.innerHTML += `<tr>
-                <td>${f.id}</td>
-                <td>${f.name}</td>
-                <td>${f.price}</td>
-                </tr>
-                `;
+        const table = document.querySelector("#app");
+        // let tbody = document.createElement("tbody");
+        // let tableList = table.append(tbody);
+        fruits.forEach(f => {
+
+            const tr = document.createElement("tr");
+            for(const key in f){
+                const td = document.createElement("td");
+                td.append(f[key]);
+                tr.append(td);
+            }
+            // tbody.innerHTML += `<tr>
+            //                         <td>${f.id}</td>
+            //                         <td>${f.name}</td>
+            //                         <td>${f.price}</td>
+            //                     </tr>`;
+            table.append(tr);
         });
-        table.setAttribute("border",1);
+        // table.setAttribute("border", 1);
 
         // const fruits = [
         //     "apple",
