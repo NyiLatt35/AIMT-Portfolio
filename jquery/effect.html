@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Effect</title>
+</head>
+
+<body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeTo">Fade To</button>
+    <button id="fadeToggle">Fade Toggle</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nesciunt tempora commodi qui harum iste cum
+        eos optio omnis accusamus dicta nostrum itaque ea dolores consectetur, provident facilis molestias soluta.</p>
+
+    <script src="./jquery.min.js"></script>
+    <script>
+        $('#hide').click(function () {
+            $('p').hide();
+        });
+        $('#show').click(function () {
+            $('p').show();
+        });
+        $('#toggle').click(function () {
+            $('p').toggle();
+        });
+
+        $('#fadeIn').click(function () {
+            $('p').fadeIn(3000,0.4,function(){
+                $(this).css("color", "blue");
+            });
+        });
+        $('#fadeOut').click(function () {
+            $('p').fadeOut(3000,0.5,function(){
+                $(this).css("color", "pink");
+            });
+        });
+        $('#fadeTo').click(function () {
+            $('p').fadeTo(3000,0.4,function(){
+                $(this).css("color", "red");
+            });
+        });
+        $('#fadeToggle').click(function () {
+            $('p').fadeToggle(3000,1,function(){
+                $(this).css("color", "green");
+            });
+        });
+        
+    </script>
+</body>
+
+</html>
